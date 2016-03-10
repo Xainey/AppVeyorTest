@@ -1,10 +1,24 @@
-﻿Function Verb-Noun{
-param($path,$timeout)
+﻿Function Verb-Noun
+{
+    param
+    (
+        $path,
+        $timeout
+    )
 
-ForEach($dir in $path){
- if(test-path $dir){$true}else{throw "ham"}
-}
-
-
-
+    foreach($dir in $path)
+    {
+        if($dir -eq "localhost")
+        {
+            throw "local not allowed"
+        }
+        if(test-path $dir)
+        {
+            $true
+        }
+        else
+        {
+            throw "ham"
+        }
+    }
 }
