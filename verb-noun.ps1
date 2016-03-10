@@ -8,10 +8,6 @@
 
     foreach($dir in $path)
     {
-        if($dir -eq "localhost")
-        {
-            throw "local not allowed"
-        }
         if(test-path $dir)
         {
             $true
@@ -21,4 +17,5 @@
             throw "ham"
         }
     }
+    
 }

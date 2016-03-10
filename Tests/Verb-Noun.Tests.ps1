@@ -22,6 +22,10 @@ Describe 'Verb-Noun' {
         It 'Should return true when paths exist and passthru is used' {
             Verb-Noun -Path C:\, HKLM:\System -Passthru | Should be $True
         }
+
+        It 'Should Fail' {
+            $true | Should be $false
+        }
         
     }
 }
