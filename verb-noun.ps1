@@ -1,4 +1,4 @@
-﻿Function Verb-Noun
+﻿function Verb-Noun
 {
     param
     (
