@@ -23,8 +23,8 @@ Describe 'Verb-Noun' {
             Verb-Noun -Path C:\, HKLM:\System -Passthru | Should be $True
         }
 
-        It 'Should Fail' {
-            $true | Should be $false
+        It 'Should Be True' {
+            $true | Should be $true
         }
         
     }
