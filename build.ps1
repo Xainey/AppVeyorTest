@@ -42,5 +42,9 @@ $ENV:PATH -Split ";" | Out-Host
 Get-Variable | Out-Host
 
 "`n`n$lines`nOther`n`n"
-Get-Command Init
-Get-Command
+
+function Init {
+    "Do something"
+}
+
+& Init
