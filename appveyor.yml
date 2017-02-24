@@ -1,5 +1,4 @@
-install:
-  - cinst pester
+os: WMF 5
 
 build: false
 
@@ -14,6 +13,4 @@ test_script:
       $outfile = "$PSScriptRoot\badge.png"
       (New-Object 'System.Net.WebClient').DownloadFile($badgeurl, "$PSScriptRoot\badge.png")
       Push-AppveyorArtifact $outfile
-
-on_finish:
-  - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+      Get-Command Init
